@@ -1,4 +1,4 @@
-Root Leaderboard was created to track elo for players and factions
+Root Leaderboard was created to track elo for players and factions. Currently supports base factions.
 
 - main: executes the script
 - functions: home of functions called in main
