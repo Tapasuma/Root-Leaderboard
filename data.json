@@ -1,0 +1,17 @@
+{
+    "players": {
+        "Bailey": 1219,
+        "Bella": 1229,
+        "Bob": 1201,
+        "Billy": 1201
+    },
+    "factions": {
+        "CA": 1220,
+        "BI": 1212,
+        "WA": 1217,
+        "VA": 1205
+    },
+    "other": {
+        "games_played": 0
+    }
+}
