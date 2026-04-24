@@ -12,19 +12,7 @@ print_logo()
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(base_dir, "data.json")
-
-"""with open(file_path, "r") as f:
-    data = json.load(f)
-"""
-
 console = Console()
-
-"""data = load_data(file_path)
-players = data["players"]
-factions = data["factions"]"""
-
-
-
 
 while True:
 
@@ -143,10 +131,3 @@ while True:
     ########################### EXIT
     elif choice == 5:
         break
-
-# Required Improvents
-
-# Ideas
-    # players: elo, nbr of matches, nbr of wins
-    # Factions: elo, nbr of wins
-    # total games played
