@@ -129,11 +129,4 @@ def draw(raw:str) -> list:
 
 if __name__ == "__main__":
     
-    #print(update_elo(file_path, "players", "Billy", 12))
-    #print(update_elo(file_path, "players", "Bella", 12))
-    #table_players = create_leaderboard(players, "PLAYERS")
-    #table_factions= create_leaderboard(factions, "FACTIONS")
-    #leaderboard = Columns([table_players, table_factions])
-    #console.print(leaderboard)
-    #print(add_player(file_path, "Hugo", 1212))
     print(elo_calc("draw",2405, 2467))
