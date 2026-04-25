@@ -1,10 +1,8 @@
 import os
-import json
 from rich.console import Console
 from rich.table import Table
 from rich.columns import Columns
 from functions import elo_calc, update_elo, create_leaderboard, add_player, load_data, remove_player, print_logo, draw
-import pyfiglet
 from colorama import Fore, Style, init
 
 init()
@@ -46,8 +44,8 @@ while True:
     elif choice == 2: 
 
         standing_players = input("Please enter the names of the players, starting with first place, e.g. Bella, Billy, Bailey, Bob: ")
-        standing_factions = input("Please enter the factions in short-form (VA for Vagabond, WA for Woodland Alliance, BI for Eyrie Dynasty, CA for Marquise de Cat) starting with first place, e.g. VA, WA, BI, CA: ")
-        raw = input("Did anyone draw? Y/N: ")
+        standing_factions = input("Please enter the factions in short-form (V for Vagabond, WA for Woodland Alliance, ED for Eyrie Dynasty, MC for Marquise de Cat) starting with first place, e.g. V, WA, ED, MC: ")
+        raw = input("Did anyone draw? y/n: ")
 
         draw_list = draw(raw)
 
@@ -70,7 +68,7 @@ while True:
 
         missing_f = [f for f in list_factions if f not in factions] # Appends f if true, iterates over list_factions, if statement
         if missing_f:
-            print(f"Missing factions: {', '.join(missing_f)}. Please use VA for Vagabond, WA for Woodland Alliance, BI for Eyrie Dynasty, and CA for Marquise de Cat")
+            print(f"Missing factions: {', '.join(missing_f)}. Please use V for Vagabond, WA for Woodland Alliance, ED for Eyrie Dynasty, and MC for Marquise de Cat")
             continue
 
         ###### Walks through all the duels and calculated the elo for each and summarises it in a list, one for players and one for factions ######
@@ -124,8 +122,8 @@ while True:
         data = load_data(file_path)
 
         player_to_remove = input("What is the name of the player you want to remove?\n")
-        sure = input("Are you sure you want to remove them? Y/N\n")
-        if sure == "Y":
+        sure = input("Are you sure you want to remove them? y/n\n")
+        if sure == "y":
             print(remove_player(file_path, player_to_remove))
 
     ########################### EXIT
